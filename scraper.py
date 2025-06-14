@@ -6,27 +6,28 @@ from bs4 import BeautifulSoup
 from helper import Job
 
 class JobScraper(object):
-    def __init__(self, seen_file="./jobsFound/seen_jobs.json"):
-        self.seen_file = seen_file
-        self.seen_jobs = self.load_seen_jobs()
+    def __init__(self, prefs, seen_file="jobs.json"):
+        self.prefs = prefs
+        self.seen_file = f"./jobsFound/{prefs.companyName.lower()}_{seen_file}"
+        self.seen_jobs = self._load_seen_jobs()
 
-    def load_seen_jobs(self):
+    def _load_seen_jobs(self):
         if os.path.exists(self.seen_file):
             with open(self.seen_file, "r") as f:
                 return json.load(f)
         return {}
 
-    def save_seen_jobs(self):
+    def _save_seen_jobs(self):
         with open(self.seen_file, "w") as f:
             json.dump(self.seen_jobs, f, indent=2)
 
-    def update_seen(self, newJobs=None):
+    def _update_seen(self, newJobs=None):
         if newJobs:
             for job in newJobs:
                 self.seen_jobs[job.url] = job.to_dict()
-        self.save_seen_jobs()
+        self._save_seen_jobs()
 
-    def get_new_jobs(self, jobs):
+    def _get_new_jobs(self, jobs):
         new_jobs = []
         for job in jobs:
             if job.url not in self.seen_jobs:
@@ -45,7 +46,7 @@ class JobScraper(object):
         print(f"Total new jobs found: {len(job_list)}")
         print("-" * 40)
 
-    def fetch_jobs(self, prefs):
+    def _fetch_jobs(self, prefs):
         response = requests.get(prefs.url)
         if response.status_code != 200:
             print(f"Failed to retrieve jobs: {response.status_code}")
@@ -75,13 +76,13 @@ class JobScraper(object):
 
         return jobs
 
-    def run_scraper(self, prefs):
-        jobs = self.fetch_jobs(prefs)
-        new_jobs = self.get_new_jobs(jobs)
+    def run_scraper(self):
+        jobs = self._fetch_jobs(self.prefs)
+        new_jobs = self._get_new_jobs(jobs)
 
         if new_jobs:
             print(f"\n📬 {len(new_jobs)} NEW jobs found!\n")
             self.print_jobs(new_jobs)
-            self.update_seen(new_jobs)
+            self._update_seen(new_jobs)
         else:
             print("No new jobs found today.")
