@@ -47,7 +47,47 @@ class JobScraper(object):
         print(f"Found {len(job_list)} new jobs at {self.prefs.companyName}:\n")
         print("-" * 40)
 
-    def _fetch_jobs(self, prefs):
+    def _fetch_jobs_amazon(self, prefs):
+        response = requests.get(prefs.url, headers={"User-Agent": "Mozilla/5.0"})
+        if response.status_code != 200:
+            print(f"Failed to retrieve jobs: {response.status_code}")
+            return []
+
+        soup = BeautifulSoup(response.text, 'html.parser')
+        jobs = []
+
+        for job_tile in soup.select("div.job-tile"):
+            # Title + URL
+            link_tag = job_tile.find("a", class_="job-link", href=True)
+            if not link_tag:
+                continue
+
+            title = link_tag.get_text(strip=True)
+            url = "https://www.amazon.jobs" + link_tag["href"]
+
+            # Location
+            location_tag = job_tile.select_one("ul > li.text-nowrap")
+            location = location_tag.get_text(strip=True) if location_tag else "N/A"
+
+            # Optional: Job ID (for tracking/debugging, not displayed in email)
+            # job_id_tag = job_tile.select_one("ul > li:nth-of-type(4)")
+            # job_id = job_id_tag.get_text(strip=True) if job_id_tag else "N/A"
+
+            title_lower = title.lower()
+            if "engineer" in title_lower and not any(term in title_lower for term in prefs.not_interested):
+                jobs.append(Job(
+                    company=prefs.companyName,
+                    title=title,
+                    url=url,
+                    location=location,
+                    team="N/A"
+                ))
+
+        return jobs
+
+
+
+    def _fetch_jobs_stripe(self, prefs):
         response = requests.get(prefs.url)
         if response.status_code != 200:
             print(f"Failed to retrieve jobs: {response.status_code}")
@@ -76,6 +116,14 @@ class JobScraper(object):
                 jobs.append(Job(prefs.companyName, title, url, location, team))
 
         return jobs
+
+    def _fetch_jobs(self, prefs):
+        if prefs.companyName.lower() == "amazon":
+            return self._fetch_jobs_amazon(prefs)
+        elif prefs.companyName.lower() == "stripe":
+            return self._fetch_jobs_stripe(prefs)
+        else:
+            raise ValueError(f"No fetch method implemented for company: {prefs.companyName}")
 
     def _format_job(self, job):
         return f"{job.title}\n{job.location} | {job.team}\n{job.url}\nFirst seen: {job.detected_at}\n"

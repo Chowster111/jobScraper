@@ -23,3 +23,24 @@ def build_stripe_url():
     }
     
     return f"{base_url}?{urlencode(params, doseq=True)}"
+
+def build_amazon_url():
+    base_url = "https://www.amazon.jobs/en/search"
+    
+    params = {
+        "offset": 0,
+        "result_limit": 10,
+        "sort": "recent",
+        "category[]": "software-development",
+        "job_type[]": "Full-Time",
+        "distanceType": "Mi",
+        "radius": "80km",
+        "latitude": "47.6062",
+        "longitude": "-122.3321",
+        "base_query": "software engineer",
+        "city": "Seattle",
+        "country": "US",
+        "region": "Washington"
+    }
+
+    return f"{base_url}?{urlencode(params, doseq=True)}"

@@ -1,6 +1,6 @@
 # jobSearch.py
 from helper import preference
-from queryBuilder import build_stripe_url
+from queryBuilder import build_stripe_url, build_amazon_url
 from scraper import JobScraper
 # ----- Constants -----
 not_interested_words = [
@@ -29,9 +29,14 @@ if __name__ == "__main__":
         not_interested=not_interested_words,
     )
     """
+    amazon_prefs = preference(
+        url=build_amazon_url(),
+        companyName="Amazon",
+        base_url="https://www.amazon.jobs",
+        not_interested=not_interested_words
+    )
 
-
-    preferencelist = [stripe_prefs]
+    preferencelist = [stripe_prefs, amazon_prefs]
 
 
     for prefs in preferencelist:
