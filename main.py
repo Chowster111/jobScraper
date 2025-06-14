@@ -19,7 +19,20 @@ if __name__ == "__main__":
         base_url="https://stripe.com",
         not_interested=not_interested_words
     )
+
+
+    """
+    meta_prefs = preference(
+        url=build_meta_url(),
+        companyName="Meta",
+        base_url="https://www.metacareers.com",
+        not_interested=not_interested_words,
+    )
+    """
+
+
     preferencelist = [stripe_prefs]
+
 
     for prefs in preferencelist:
         print(f"Searching for jobs at {prefs.companyName}...")

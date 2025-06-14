@@ -1,147 +1,11 @@
 {
-  "https://stripe.com/jobs/listing/backend-engineer-developer-experience-product-platform/5628293": {
-    "company": "Stripe",
-    "title": "Backend Engineer, Developer Experience & Product Platform",
-    "url": "https://stripe.com/jobs/listing/backend-engineer-developer-experience-product-platform/5628293",
-    "location": "Seattle",
-    "team": "Platform",
-    "detected_at": "2025-06-14 01:40 AM EDT"
-  },
-  "https://stripe.com/jobs/listing/backend-engineer-revenue-and-finance-automation/5932585": {
-    "company": "Stripe",
-    "title": "Backend Engineer, Revenue and Finance Automation",
-    "url": "https://stripe.com/jobs/listing/backend-engineer-revenue-and-finance-automation/5932585",
-    "location": "Toronto",
-    "team": "Revenue & Financial Automation",
-    "detected_at": "2025-06-14 01:40 AM EDT"
-  },
-  "https://stripe.com/jobs/listing/backend-api-engineer-money-as-a-service-canada/6176763": {
-    "company": "Stripe",
-    "title": "Backend/API Engineer, Money as a Service (Canada)",
-    "url": "https://stripe.com/jobs/listing/backend-api-engineer-money-as-a-service-canada/6176763",
-    "location": "Toronto",
-    "team": "Banking as a Service",
-    "detected_at": "2025-06-14 01:40 AM EDT"
-  },
-  "https://stripe.com/jobs/listing/broadcast-engineer/6632309": {
-    "company": "Stripe",
-    "title": "Broadcast Engineer",
-    "url": "https://stripe.com/jobs/listing/broadcast-engineer/6632309",
-    "location": "Seattle",
-    "team": "Infrastructure & Corporate Tech",
-    "detected_at": "2025-06-14 01:40 AM EDT"
-  },
-  "https://stripe.com/jobs/listing/core-applications-engineer/6694531": {
-    "company": "Stripe",
-    "title": "Core Applications Engineer",
-    "url": "https://stripe.com/jobs/listing/core-applications-engineer/6694531",
-    "location": "Remote in United States",
-    "team": "Infrastructure & Corporate Tech",
-    "detected_at": "2025-06-14 01:40 AM EDT"
-  },
-  "https://stripe.com/jobs/listing/data-software-engineer-support-data-foundations/6594794": {
-    "company": "Stripe",
-    "title": "Data Software Engineer, Support Data Foundations",
-    "url": "https://stripe.com/jobs/listing/data-software-engineer-support-data-foundations/6594794",
-    "location": "Toronto",
-    "team": "Infrastructure & Corporate Tech",
-    "detected_at": "2025-06-14 01:40 AM EDT"
-  },
-  "https://stripe.com/jobs/listing/full-stack-engineer-developer-experience-product-platform/6567104": {
-    "company": "Stripe",
-    "title": "Full Stack Engineer, Developer Experience & Product Platform",
-    "url": "https://stripe.com/jobs/listing/full-stack-engineer-developer-experience-product-platform/6567104",
-    "location": "Remote in Canada",
-    "team": "Platform",
-    "detected_at": "2025-06-14 01:40 AM EDT"
-  },
-  "https://stripe.com/jobs/listing/full-stack-engineer-enterprise-engineering/6838176": {
-    "company": "Stripe",
-    "title": "Full Stack Engineer, Enterprise Engineering",
-    "url": "https://stripe.com/jobs/listing/full-stack-engineer-enterprise-engineering/6838176",
-    "location": "Toronto",
-    "team": "Platform",
-    "detected_at": "2025-06-14 01:40 AM EDT"
-  },
-  "https://stripe.com/jobs/listing/full-stack-engineer-payments-and-risk/6771172": {
-    "company": "Stripe",
-    "title": "Full Stack Engineer, Payments and Risk",
-    "url": "https://stripe.com/jobs/listing/full-stack-engineer-payments-and-risk/6771172",
-    "location": "Toronto",
-    "team": "Platform",
-    "detected_at": "2025-06-14 01:40 AM EDT"
-  },
-  "https://stripe.com/jobs/listing/full-stack-engineer-revenue-and-finance-automation/6771183": {
-    "company": "Stripe",
-    "title": "Full Stack Engineer, Revenue and Finance Automation",
-    "url": "https://stripe.com/jobs/listing/full-stack-engineer-revenue-and-finance-automation/6771183",
-    "location": "Remote in Canada",
-    "team": "Platform",
-    "detected_at": "2025-06-14 01:40 AM EDT"
-  },
-  "https://stripe.com/jobs/listing/fullstack-engineer-money-as-a-service/6771174": {
-    "company": "Stripe",
-    "title": "Fullstack Engineer, Money as a Service",
-    "url": "https://stripe.com/jobs/listing/fullstack-engineer-money-as-a-service/6771174",
-    "location": "Remote in Canada",
-    "team": "Platform",
-    "detected_at": "2025-06-14 01:40 AM EDT"
-  },
-  "https://stripe.com/jobs/listing/integration-engineer-professional-services/6651829": {
-    "company": "Stripe",
-    "title": "Integration Engineer, Professional Services",
-    "url": "https://stripe.com/jobs/listing/integration-engineer-professional-services/6651829",
-    "location": "Mexico City",
-    "team": "Professional Services",
-    "detected_at": "2025-06-14 01:40 AM EDT"
-  },
-  "https://stripe.com/jobs/listing/integration-engineer-professional-services/6651831": {
-    "company": "Stripe",
-    "title": "Integration Engineer, Professional Services",
-    "url": "https://stripe.com/jobs/listing/integration-engineer-professional-services/6651831",
-    "location": "Toronto",
-    "team": "Professional Services",
-    "detected_at": "2025-06-14 01:40 AM EDT"
-  },
-  "https://stripe.com/jobs/listing/software-development-engineer/6574271": {
-    "company": "Stripe",
-    "title": "Software Development Engineer",
-    "url": "https://stripe.com/jobs/listing/software-development-engineer/6574271",
-    "location": "Remote in Canada",
-    "team": "Data & Data Science",
-    "detected_at": "2025-06-14 01:40 AM EDT"
-  },
-  "https://stripe.com/jobs/listing/software-engineer-data/6268625": {
-    "company": "Stripe",
-    "title": "Software Engineer, Data",
-    "url": "https://stripe.com/jobs/listing/software-engineer-data/6268625",
-    "location": "Remote in Canada",
-    "team": "Data & Data Science",
-    "detected_at": "2025-06-14 01:40 AM EDT"
-  },
-  "https://stripe.com/jobs/listing/software-engineer-privacy-products/6953265": {
-    "company": "Stripe",
-    "title": "Software Engineer, Privacy Products",
-    "url": "https://stripe.com/jobs/listing/software-engineer-privacy-products/6953265",
-    "location": "Seattle",
-    "team": "Security",
-    "detected_at": "2025-06-14 01:40 AM EDT"
-  },
-  "https://stripe.com/jobs/listing/software-engineer-secrets-infrastructure/6942379": {
-    "company": "Stripe",
-    "title": "Software Engineer, Secrets Infrastructure",
-    "url": "https://stripe.com/jobs/listing/software-engineer-secrets-infrastructure/6942379",
-    "location": "Remote in United States",
-    "team": "Security",
-    "detected_at": "2025-06-14 01:40 AM EDT"
-  },
   "https://stripe.com/jobs/listing/av-builds-and-operations-engineer/6689898": {
     "company": "Stripe",
     "title": "AV Builds and Operations Engineer",
     "url": "https://stripe.com/jobs/listing/av-builds-and-operations-engineer/6689898",
     "location": "Seattle",
     "team": "Infrastructure & Corporate Tech",
-    "detected_at": "2025-06-14 01:40 AM EDT"
+    "detected_at": "2025-06-14 01:58 AM EDT"
   },
   "https://stripe.com/jobs/listing/backend-engineer-core-tech-canada/6567253": {
     "company": "Stripe",
@@ -149,7 +13,7 @@
     "url": "https://stripe.com/jobs/listing/backend-engineer-core-tech-canada/6567253",
     "location": "Toronto",
     "team": "Infrastructure & Corporate Tech",
-    "detected_at": "2025-06-14 01:40 AM EDT"
+    "detected_at": "2025-06-14 01:58 AM EDT"
   },
   "https://stripe.com/jobs/listing/backend-engineer-core-technology/6042172": {
     "company": "Stripe",
@@ -157,6 +21,142 @@
     "url": "https://stripe.com/jobs/listing/backend-engineer-core-technology/6042172",
     "location": "South San Francisco HQ",
     "team": "Infrastructure & Corporate Tech",
-    "detected_at": "2025-06-14 01:40 AM EDT"
+    "detected_at": "2025-06-14 01:58 AM EDT"
+  },
+  "https://stripe.com/jobs/listing/backend-engineer-developer-experience-product-platform/5628293": {
+    "company": "Stripe",
+    "title": "Backend Engineer, Developer Experience & Product Platform",
+    "url": "https://stripe.com/jobs/listing/backend-engineer-developer-experience-product-platform/5628293",
+    "location": "Seattle",
+    "team": "Platform",
+    "detected_at": "2025-06-14 01:58 AM EDT"
+  },
+  "https://stripe.com/jobs/listing/backend-engineer-revenue-and-finance-automation/5932585": {
+    "company": "Stripe",
+    "title": "Backend Engineer, Revenue and Finance Automation",
+    "url": "https://stripe.com/jobs/listing/backend-engineer-revenue-and-finance-automation/5932585",
+    "location": "Toronto",
+    "team": "Revenue & Financial Automation",
+    "detected_at": "2025-06-14 01:58 AM EDT"
+  },
+  "https://stripe.com/jobs/listing/backend-api-engineer-money-as-a-service-canada/6176763": {
+    "company": "Stripe",
+    "title": "Backend/API Engineer, Money as a Service (Canada)",
+    "url": "https://stripe.com/jobs/listing/backend-api-engineer-money-as-a-service-canada/6176763",
+    "location": "Toronto",
+    "team": "Banking as a Service",
+    "detected_at": "2025-06-14 01:58 AM EDT"
+  },
+  "https://stripe.com/jobs/listing/broadcast-engineer/6632309": {
+    "company": "Stripe",
+    "title": "Broadcast Engineer",
+    "url": "https://stripe.com/jobs/listing/broadcast-engineer/6632309",
+    "location": "Seattle",
+    "team": "Infrastructure & Corporate Tech",
+    "detected_at": "2025-06-14 01:58 AM EDT"
+  },
+  "https://stripe.com/jobs/listing/core-applications-engineer/6694531": {
+    "company": "Stripe",
+    "title": "Core Applications Engineer",
+    "url": "https://stripe.com/jobs/listing/core-applications-engineer/6694531",
+    "location": "Remote in United States",
+    "team": "Infrastructure & Corporate Tech",
+    "detected_at": "2025-06-14 01:58 AM EDT"
+  },
+  "https://stripe.com/jobs/listing/data-software-engineer-support-data-foundations/6594794": {
+    "company": "Stripe",
+    "title": "Data Software Engineer, Support Data Foundations",
+    "url": "https://stripe.com/jobs/listing/data-software-engineer-support-data-foundations/6594794",
+    "location": "Toronto",
+    "team": "Infrastructure & Corporate Tech",
+    "detected_at": "2025-06-14 01:58 AM EDT"
+  },
+  "https://stripe.com/jobs/listing/full-stack-engineer-developer-experience-product-platform/6567104": {
+    "company": "Stripe",
+    "title": "Full Stack Engineer, Developer Experience & Product Platform",
+    "url": "https://stripe.com/jobs/listing/full-stack-engineer-developer-experience-product-platform/6567104",
+    "location": "Remote in Canada",
+    "team": "Platform",
+    "detected_at": "2025-06-14 01:58 AM EDT"
+  },
+  "https://stripe.com/jobs/listing/full-stack-engineer-enterprise-engineering/6838176": {
+    "company": "Stripe",
+    "title": "Full Stack Engineer, Enterprise Engineering",
+    "url": "https://stripe.com/jobs/listing/full-stack-engineer-enterprise-engineering/6838176",
+    "location": "Toronto",
+    "team": "Platform",
+    "detected_at": "2025-06-14 01:58 AM EDT"
+  },
+  "https://stripe.com/jobs/listing/full-stack-engineer-payments-and-risk/6771172": {
+    "company": "Stripe",
+    "title": "Full Stack Engineer, Payments and Risk",
+    "url": "https://stripe.com/jobs/listing/full-stack-engineer-payments-and-risk/6771172",
+    "location": "Toronto",
+    "team": "Platform",
+    "detected_at": "2025-06-14 01:58 AM EDT"
+  },
+  "https://stripe.com/jobs/listing/full-stack-engineer-revenue-and-finance-automation/6771183": {
+    "company": "Stripe",
+    "title": "Full Stack Engineer, Revenue and Finance Automation",
+    "url": "https://stripe.com/jobs/listing/full-stack-engineer-revenue-and-finance-automation/6771183",
+    "location": "Remote in Canada",
+    "team": "Platform",
+    "detected_at": "2025-06-14 01:58 AM EDT"
+  },
+  "https://stripe.com/jobs/listing/fullstack-engineer-money-as-a-service/6771174": {
+    "company": "Stripe",
+    "title": "Fullstack Engineer, Money as a Service",
+    "url": "https://stripe.com/jobs/listing/fullstack-engineer-money-as-a-service/6771174",
+    "location": "Remote in Canada",
+    "team": "Platform",
+    "detected_at": "2025-06-14 01:58 AM EDT"
+  },
+  "https://stripe.com/jobs/listing/integration-engineer-professional-services/6651829": {
+    "company": "Stripe",
+    "title": "Integration Engineer, Professional Services",
+    "url": "https://stripe.com/jobs/listing/integration-engineer-professional-services/6651829",
+    "location": "Mexico City",
+    "team": "Professional Services",
+    "detected_at": "2025-06-14 01:58 AM EDT"
+  },
+  "https://stripe.com/jobs/listing/integration-engineer-professional-services/6651831": {
+    "company": "Stripe",
+    "title": "Integration Engineer, Professional Services",
+    "url": "https://stripe.com/jobs/listing/integration-engineer-professional-services/6651831",
+    "location": "Toronto",
+    "team": "Professional Services",
+    "detected_at": "2025-06-14 01:58 AM EDT"
+  },
+  "https://stripe.com/jobs/listing/software-development-engineer/6574271": {
+    "company": "Stripe",
+    "title": "Software Development Engineer",
+    "url": "https://stripe.com/jobs/listing/software-development-engineer/6574271",
+    "location": "Remote in Canada",
+    "team": "Data & Data Science",
+    "detected_at": "2025-06-14 01:58 AM EDT"
+  },
+  "https://stripe.com/jobs/listing/software-engineer-data/6268625": {
+    "company": "Stripe",
+    "title": "Software Engineer, Data",
+    "url": "https://stripe.com/jobs/listing/software-engineer-data/6268625",
+    "location": "Remote in Canada",
+    "team": "Data & Data Science",
+    "detected_at": "2025-06-14 01:58 AM EDT"
+  },
+  "https://stripe.com/jobs/listing/software-engineer-privacy-products/6953265": {
+    "company": "Stripe",
+    "title": "Software Engineer, Privacy Products",
+    "url": "https://stripe.com/jobs/listing/software-engineer-privacy-products/6953265",
+    "location": "Seattle",
+    "team": "Security",
+    "detected_at": "2025-06-14 01:58 AM EDT"
+  },
+  "https://stripe.com/jobs/listing/software-engineer-secrets-infrastructure/6942379": {
+    "company": "Stripe",
+    "title": "Software Engineer, Secrets Infrastructure",
+    "url": "https://stripe.com/jobs/listing/software-engineer-secrets-infrastructure/6942379",
+    "location": "Remote in United States",
+    "team": "Security",
+    "detected_at": "2025-06-14 01:58 AM EDT"
   }
 }

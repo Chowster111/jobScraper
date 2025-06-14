@@ -78,14 +78,13 @@ class JobScraper(object):
         return jobs
 
     def _format_job(self, job):
-        return f"{job.title}\n{job.location} | {job.team}\n{job.url}\n First seen: {job.detected_at}\n"
+        return f"{job.title}\n{job.location} | {job.team}\n{job.url}\nFirst seen: {job.detected_at}\n"
 
 
     def _sendmail(self, new_jobs):
-            body = ""
             body = "\n\n".join([self._format_job(job) for job in new_jobs])
-
-            subject = f"[{self.prefs.companyName}] {len(new_jobs)} new job(s) posted!"
+            subject = f"Job Scraper: [{self.prefs.companyName}] {len(new_jobs)} new job(s) posted!"
+            
             mailer = Mailer()
             mailer.send_email_notification(subject, body)
             print("✅ Email notification sent!")
