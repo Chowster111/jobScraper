@@ -1,25 +1,50 @@
+# jobSearch.py
 from bs4 import BeautifulSoup
 import requests
+import os
+import json
 from helper import Job, preference
 from queryBuilder import build_stripe_url
 
-
 class JobScraper(object):
-    def __init__(self):
-        pass
+    def __init__(self, seen_file="./jobsFound/seen_jobs.json"):
+        self.seen_file = seen_file
+        self.seen_jobs = self.load_seen_jobs()
 
-    def print_jobs(self, job):
-        if not job:
+    def load_seen_jobs(self):
+        if os.path.exists(self.seen_file):
+            with open(self.seen_file, "r") as f:
+                return json.load(f)
+        return {}
+
+    def save_seen_jobs(self):
+        with open(self.seen_file, "w") as f:
+            json.dump(self.seen_jobs, f, indent=2)
+
+    def update_seen(self, newJobs=None):
+        if newJobs:
+            for job in newJobs:
+                self.seen_jobs[job.url] = job.to_dict()
+        self.save_seen_jobs()
+
+    def get_new_jobs(self, jobs):
+        new_jobs = []
+        for job in jobs:
+            if job.url not in self.seen_jobs:
+                new_jobs.append(job)
+        return new_jobs
+
+    def print_jobs(self, job_list):
+        if not job_list:
             print("No jobs found.")
             return
-        
-        for j in job:
+
+        for j in job_list:
             print(j)
             print("-" * 40)
-        
-        print(f"Total jobs found for {job[0].company}: {len(job)}")
-        print("-" * 40)
 
+        print(f"Total new jobs found: {len(job_list)}")
+        print("-" * 40)
 
     def fetch_jobs(self, prefs):
         response = requests.get(prefs.url)
@@ -46,11 +71,21 @@ class JobScraper(object):
 
             title_lower = title.lower()
 
-            # Include if it contains "engineer" and excludes blocked words
             if "engineer" in title_lower and not any(word in title_lower for word in prefs.not_interested):
                 jobs.append(Job(prefs.companyName, title, url, location, team))
 
         return jobs
+
+    def run_scraper(self, prefs):
+        jobs = self.fetch_jobs(prefs)
+        new_jobs = self.get_new_jobs(jobs)
+
+        if new_jobs:
+            print(f"\n📬 {len(new_jobs)} NEW jobs found!\n")
+            self.print_jobs(new_jobs)
+            self.update_seen(new_jobs)
+        else:
+            print("No new jobs found today.")
 
 
 # ----- Execution -----
@@ -68,6 +103,5 @@ if __name__ == "__main__":
         not_interested=not_interested_words
     )
 
-    scraper= JobScraper()
-    jobs = scraper.fetch_jobs(stripe_prefs)
-    scraper.print_jobs(jobs)
+    scraper = JobScraper()
+    scraper.run_scraper(stripe_prefs)
