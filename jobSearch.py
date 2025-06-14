@@ -24,5 +24,5 @@ if __name__ == "__main__":
     for prefs in preferencelist:
         print(f"Searching for jobs at {prefs.companyName}...")
         scraper = JobScraper(prefs)
-        jobs = scraper.run_scraper()
+        scraper.run()
         

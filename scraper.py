@@ -4,6 +4,7 @@ import json
 import requests
 from bs4 import BeautifulSoup
 from helper import Job
+from mailer import Mailer
 
 class JobScraper(object):
     def __init__(self, prefs, seen_file="jobs.json"):
@@ -43,7 +44,7 @@ class JobScraper(object):
             print(j)
             print("-" * 40)
 
-        print(f"Total new jobs found: {len(job_list)}")
+        print(f"Found {len(job_list)} new jobs at {self.prefs.companyName}:\n")
         print("-" * 40)
 
     def _fetch_jobs(self, prefs):
@@ -76,7 +77,20 @@ class JobScraper(object):
 
         return jobs
 
-    def run_scraper(self):
+    def _format_job(self, job):
+        return f"{job.title}\n{job.location} | {job.team}\n{job.url}\n First seen: {job.detected_at}\n"
+
+
+    def _sendmail(self, new_jobs):
+            body = ""
+            body = "\n\n".join([self._format_job(job) for job in new_jobs])
+
+            subject = f"[{self.prefs.companyName}] {len(new_jobs)} new job(s) posted!"
+            mailer = Mailer()
+            mailer.send_email_notification(subject, body)
+            print("✅ Email notification sent!")
+
+    def run(self):
         jobs = self._fetch_jobs(self.prefs)
         new_jobs = self._get_new_jobs(jobs)
 
@@ -84,5 +98,9 @@ class JobScraper(object):
             print(f"\n📬 {len(new_jobs)} NEW jobs found!\n")
             self.print_jobs(new_jobs)
             self._update_seen(new_jobs)
+            self._sendmail(new_jobs)
+
         else:
-            print("No new jobs found today.")
+            print(f"No new jobs found today for {self.prefs.companyName}.")
+            self._sendmail([])  # Send an email even if no new jobs found, to keep the user informed
+        
