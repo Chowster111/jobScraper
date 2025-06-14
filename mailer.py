@@ -24,6 +24,5 @@ class Mailer(object):
             with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
                 server.login(self.fromUser, self.password)
                 server.send_message(msg)
-                print("✅ Email sent successfully!")
         except Exception as e:
             print("❌ Failed to send email:", e)
