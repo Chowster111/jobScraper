@@ -30,7 +30,7 @@ jobs:
         EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
         EMAIL_TO: ${{ secrets.EMAIL_TO }}
       run: |
-        python jobSearch.py
+        python main.py
 
     - name: Commit updated job JSON logs
       run: |
