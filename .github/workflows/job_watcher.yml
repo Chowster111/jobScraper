@@ -26,9 +26,9 @@ jobs:
 
     - name: Run job alert scraper
       env:
-        EMAIL_USER: ${{ secrets.EMAIL_USER }}
-        EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
-        EMAIL_TO: ${{ secrets.EMAIL_TO }}
+        EMAIL_USER: arijit.chowdhury333@gmail.com
+        EMAIL_PASS: tmnmdwhredyjwozr
+        EMAIL_TO: arijit.chowdhury333@gmail.com
       run: |
         python main.py
 

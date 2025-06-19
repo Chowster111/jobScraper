@@ -158,5 +158,21 @@
     "location": "Remote in United States",
     "team": "Security",
     "detected_at": "2025-06-14 01:58 AM EDT"
+  },
+  "https://stripe.com/jobs/listing/backend-engineer-api-payments-and-risk/6163230": {
+    "company": "Stripe",
+    "title": "Backend Engineer/API, Payments and Risk",
+    "url": "https://stripe.com/jobs/listing/backend-engineer-api-payments-and-risk/6163230",
+    "location": "Seattle",
+    "team": "Payments",
+    "detected_at": "2025-06-18 10:11 PM EDT"
+  },
+  "https://stripe.com/jobs/listing/backend-api-engineer-money-as-a-service-us/6176758": {
+    "company": "Stripe",
+    "title": "Backend/API Engineer, Money as a Service (US)",
+    "url": "https://stripe.com/jobs/listing/backend-api-engineer-money-as-a-service-us/6176758",
+    "location": "South San Francisco HQ",
+    "team": "Banking as a Service",
+    "detected_at": "2025-06-18 10:11 PM EDT"
   }
 }

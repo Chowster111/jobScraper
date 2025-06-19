@@ -3,4 +3,3 @@ requests
 pytz
 python-dotenv
 streamlit
-os
