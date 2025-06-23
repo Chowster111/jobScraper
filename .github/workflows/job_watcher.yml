@@ -3,7 +3,7 @@ name: Daily Job Alerts
 on:
   schedule:
     - cron: "0 0 * * *"    # 12:00 AM UTC (8 PM previous day EDT)
-    - cron: "0 12 * * *"   # 12:00 PM UTC (8 AM EDT)
+    - cron: "1 12 * * *"   # 12:00 PM UTC (8 AM EDT)
   workflow_dispatch:       # Optional: allow manual trigger from GitHub
 
 jobs:
